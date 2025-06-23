@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strona Główna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #000000, #2e2e2e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      padding: 40px;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 60px;
+    }
+
+    .logo img {
+      height: 100%;
+      width: auto;
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 3rem;
+      margin-bottom: 60px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      position: relative;
+      flex: 1;
+      aspect-ratio: 16 / 9;
+      border-radius: 32px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: 0;
+    }
+
+    .card-text {
+      z-index: 1;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .minecraft .background {
+      background-image: url('minecraft.png');
+    }
+
+    .inne .background {
+      background-image: url('inne.png');
+    }
+
+    .irl .background {
+      background-image: url('irl.png');
+    }
+
+    .scroll-down-wrapper {
+      position: absolute;
+      bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-down-text {
+      margin-bottom: 4px;
+      font-size: 1.1rem;
+    }
+
+    .scroll-down-arrow {
+      font-size: 2rem;
+      transform: rotate(90deg);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="logo/logo.png" alt="Logo">
+  </a>
+
+  <div class="container">
+    <h1>Wybierz Kategorię</h1>
+    <div class="row">
+      <a href="strona1.html" class="card minecraft">
+        <div class="background"></div>
+        <span class="card-text">Minecraft</span>
+      </a>
+      <a href="strona2.html" class="card inne">
+        <div class="background"></div>
+        <span class="card-text">Inne gry</span>
+      </a>
+      <a href="strona3.html" class="card irl">
+        <div class="background"></div>
+        <span class="card-text">IRL</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Strzałka na dół z napisem -->
+  <a href="https://discord.com/invite/3sxnAZwyDn" class="scroll-down-wrapper" aria-label="Zamów working">
+    <div class="scroll-down-text">Soon</div>
+    <div class="scroll-down-arrow">&gt;</div>
+  </a>
+
+</body>
+</html>
